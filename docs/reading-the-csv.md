@@ -7,14 +7,14 @@ Each run produces a CSV with one row per eviction case. The columns are:
 | **name** | The defendant (tenant) named on the case |
 | **address** | Street address from the docket |
 | **city state zip** | City, state, and ZIP |
-| **case number** | The court case number (e.g. `26CI0013728`) |
+| **case number** | The court case number (e.g. `26CI9999999`) |
 | **county** | The county the case is in |
 
 ## Example
 
 ```csv
 name,address,city state zip,case number,county
-Antonio K Caraballo,4512 Bedford Avenue Apt. 11,Omaha NE 68104,26CI0013728,Douglas
+Jordan Rivera,123 Example Street Apt. 4,Omaha NE 68100,26CI9999999,Douglas
 ```
 
 ## Notes on the data
