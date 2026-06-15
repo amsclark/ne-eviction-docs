@@ -1,0 +1,7 @@
+/* Match the app's navy (#003366) for the docs' primary color. */
+:root {
+  --md-primary-fg-color:        #003366;
+  --md-primary-fg-color--light: #004080;
+  --md-primary-fg-color--dark:  #002244;
+  --md-accent-fg-color:         #004080;
+}
