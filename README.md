@@ -20,12 +20,13 @@ mkdocs serve         # http://127.0.0.1:8000
 mkdocs build         # outputs the static site to ./site
 ```
 
-## Hosting (Cloudflare Pages)
+## Hosting (Cloudflare Workers Builds)
 
-Connected to Cloudflare Pages with:
+Deployed as a static-assets Worker. `wrangler.jsonc` points `assets.directory` at
+the MkDocs output (`./site`). In the Cloudflare project's build settings:
 
-- **Build command:** `pip install -r requirements.txt && mkdocs build`
-- **Build output directory:** `site`
-- **Environment variable:** `PYTHON_VERSION = 3.12`
+- **Build command:** `mkdocs build`  (deps auto-install from `requirements.txt`)
+- **Deploy command:** `npx wrangler deploy`
 
-Every push to `main` triggers a rebuild and deploy.
+The build runs `mkdocs build` → produces `./site` → `wrangler deploy` uploads it as
+static assets. Every push to `main` triggers a rebuild and deploy.

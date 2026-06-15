@@ -1,0 +1,10 @@
+{
+  // Static-assets-only Worker: serve the MkDocs build output in ./site.
+  // The Cloudflare build runs the Build command (mkdocs build) first, then
+  // `npx wrangler deploy` uploads ./site as static assets — no Worker script.
+  "name": "ne-eviction-docs",
+  "compatibility_date": "2024-09-01",
+  "assets": {
+    "directory": "./site"
+  }
+}
